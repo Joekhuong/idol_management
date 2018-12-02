@@ -1,0 +1,32 @@
+﻿@model Lodi.Models.ProfileViewModel
+@{
+    ViewBag.Title = "Profile page";
+}
+
+
+<h2>Profile page</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.LabelFor(m => m.Firstname) : @Html.DisplayFor(m => m.Firstname)
+
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Lastname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+
+            <div class="form-group">                
+                <div class="col-md-5">
+                    @Html.DropDownList("ABC",Model.Idol_List, htmlAttributes: new { @class = "form-control", id = "Country" })
+                </div>
+            </div>
+        </th>
+        <th></th>
+    </tr>
+
+
+
+</table>

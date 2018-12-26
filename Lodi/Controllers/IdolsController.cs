@@ -91,6 +91,7 @@ namespace Lodi.Controllers
             if (ModelState.IsValid)
             {
                 idol.Id = Guid.NewGuid().ToString();
+                //idol.Forum.Name = idol.Name + "_Forum";
                 db.Idols.Add(idol);
                 await db.SaveChangesAsync();
                 return RedirectToAction("Index");

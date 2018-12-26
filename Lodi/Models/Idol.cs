@@ -18,7 +18,7 @@ namespace Lodi.Models
 
         [Required]
         [Column(TypeName = "Date")]
-        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:dd-MM-yyyy}")]
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:MM/dd/yyyy}")]
         public DateTime Birthday { get; set; }
 
         [Required]
@@ -26,7 +26,7 @@ namespace Lodi.Models
 
         public virtual ICollection<ApplicationUser> Followers { get; set; }
 
-        [Required]
+        //[Required]
         public virtual Forum Forum { get; set; }
 
         public Idol()
